@@ -1,0 +1,346 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+   browser reset
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-style: italic;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* begin custom styles*/
+
+@font-face {
+    font-family: AVENGEANCE_MIGHTIEST_AVENGER;
+    src: url(fonts/AVENGEANCE_MIGHTIEST_AVENGER.ttf);
+}
+body {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 100%;
+	font-size: 20px;
+	background-image: url("images/cat.png");
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+
+}
+.banner{
+	margin-top: 0px;
+	background-image: url("images/CatHeader.png");
+	height: 250px;
+	padding-bottom: 20px;
+}
+.mobile-title-text{
+	display: none;
+}
+.title-text{
+	padding-top: 35px;
+	padding-left: 20px;
+}
+#logo {
+	height: 110px;
+	margin-bottom: 0px;
+	margin-top: 40px;
+}
+h2{
+	font-size: 40px;
+}
+p, h2 {
+	font-family: 'Roboto' 'sans serif';
+}
+	
+
+body *{
+	box-sizing: inherit;
+}
+#start{
+	font-size: 40px;
+	cursor: pointer;
+}
+#start:hover{
+	font-size: 45px;
+}
+#start:hover .card{
+	opacity: 0;
+}
+a{
+	font-weight: bold;
+	color: black;
+	cursor: pointer;
+}
+#scoreboard{
+	height: 100%;
+	padding-left: 10px;
+	margin-top: 20px;
+}
+.winning {
+	background-image: url("http://hdwallpaper.freehdw.com/0007/animals_other_happy-cat_64220.jpg");
+}
+
+/*Classes for the card game*/
+
+.grumpy,.kitten,.orangecat,.milkcat,.fatcat,.kardashian{
+	cursor: pointer;
+	background-image: url("images/sprite.png");
+	background-size: 560%;
+}
+.grumpy{
+
+	background-position: 33% 2%;
+}
+.kitten{
+
+	background-position: 62% 2%;
+}
+.orangecat{
+
+	background-position: 95% 3%;
+}
+.milkcat{
+	
+	background-position: 60.5% 56.7%;
+}
+.fatcat{
+
+	background-position: 97% 57%;
+}
+.kardashian {
+	background-position: -275px -940px;
+}
+.hidden {
+	background-position: 3.5% 6%;;
+}
+.out-of-play {
+	visibility: hidden;
+}
+
+.row {
+	margin-bottom: 5px;
+
+}
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.columns{
+	float: left;
+	margin: 10px;
+}
+.card{
+	/*height: 200px;*/
+	height: 0px;
+	padding-bottom: 20%;
+	
+	border-radius: 10%;
+	max-width: 177px;
+}
+.game{
+	margin-top: 30px;
+	max-width: 1000px;
+}
+p {
+	color: black;
+	padding: 5px;
+	margin: 0px;
+}
+
+.winnertext{
+	display: none;
+	color: white;
+	font-size: 100px;
+}
+footer{
+	height: 50px;
+	background-color: black;
+	position: fixed;
+	position-bottom: 20px;
+}
+footer p{
+	color: white;
+}
+footer a{
+	color: white;
+}
+/* STYLING FOR GRID*/
+.grid-1{
+	width:8.3333333%;
+}
+.grid-2{
+	width:16.66666667%;
+}
+.grid-3{
+	width:25%;
+}
+.grid-4{
+	width:33.3333333333%;
+}
+.grid-5{
+	width:41.66666667%;
+}
+.grid-6{
+	width:50%;
+}
+.grid-7{
+	width:58.3333333333%;
+}
+.grid-8{
+	width:66.66666666667%;
+}
+.grid-9{
+	width: 75%;
+}
+.push-1{
+	margin-left:8.33333%;
+}
+.push-1-right{
+	margin-right:8.33333%;
+}
+.push-2{
+	margin-left:16.6666666667%;
+}
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+     /*MEDIA QUERIES*/
+  @media only screen and (max-width: 1174px) {
+   #logo {
+   	display: none;
+   }
+@media only screen and (max-width: 980px) {
+
+	/*.hidden{
+	background-position: -60px -60px;
+	}*/
+}
+@media only screen and (max-width: 768px) {
+	body{
+   	background-position: center;
+   	background-size: cover;
+   }
+@media only screen and (max-width: 480px) {
+  
+   .sm-grid-8{
+	width:66.66666666667%;
+	}
+	.sm-grid-4{
+	width: 23%;
+	}
+	.sm-grid-2{
+	width: 50%;
+	}
+	.push-1{
+	margin-left: 5%;
+	}
+	.push-1-right:{
+	margin-right: 0%;
+	}
+	.title-text{
+		display:none;
+	}
+	.mobile-title-text{
+		display:block;
+		padding-bottom: 2px;
+	}
+	.columns .mobile-title-text{
+		margin-bottom: 0px;
+	}
+	.card:nth-child(9){
+	margin-left: 25%;
+	}
+	h2{
+		font-size: 25px;
+	}
+	#start{
+	font-size: 25px;
+	}
+	#start:hover{
+	font-size: 25px;
+}
+	.card{
+		/*height: 80px;*/
+		height: 0px;
+		padding-bottom: 25%;
+		margin: 2px;
+	}
+	/*.grumpy,.kitten,.orangecat,.milkcat,.fatcat,.hidden,.kardashian{
+		background-size: 450px 333px;
+	}
+	.grumpy{
+
+	background-position: -120px -10px;
+	}
+	.kitten{
+
+		background-position: -235px -19px;
+	}
+	.orangecat{
+
+		background-position: -365px -5px;
+	}
+	.milkcat{
+		
+		background-position: -223px -128px;
+	}
+	.fatcat{
+
+		background-position: -360px -130px;
+	}
+	.kardashian{
+		background-position: -140px -130px;
+	}
+	.hidden{
+		background-position: -19px -27px;
+	}
+}*/
+   
+

@@ -1,0 +1,58 @@
+declare variables
+
+
+shuffle cards function declared
+	shuffles the cards
+
+display stats function declared
+	resets number of moves to 0
+	resets score to 0
+	displays score
+	displays number of moves 
+	changes turn text
+	hides you win text
+
+new game function declared
+	removes visible class
+	removes winning background
+	removes out of play class		
+	removes the hidden class (flash of displayed cards)
+	shuffle the cards
+	bounce the cards
+	add the hidden class back to all cards after 2 seconds
+	add 1 to game count variable
+	if the score is 5 and the gamecount is 5, add kardashian class to fatcat card, and remove fatcat class.  
+	otherwise add fatcat to any card with kardashian class, remove kardashian class from any kardashian card
+	runs the display stats function
+
+the game sequence- an anonymous function
+	when you click a card, run the function on that card
+	
+	if the card does not have the class visible, add 1 to the count. removes hidden and adds visible to the clicked on card. 
+		assigns cardOne variable the first value of the array class of cards with class visible
+		assigns cardTwo variable the 2nd value of that array
+	if count is 2, run this in 3/4 of a second
+		add one to number of moves
+			If cardOne = cardTwo -so if their classes match
+				add the class out of play, which hides them
+				add one to the score
+				change text to match
+				If the score is 5
+					unhide winner text
+					add hidden class back to cards
+					add winning class to body- changes bkgrnd
+					add 1 to win count
+				else, if they don't match
+					shake the visible cards
+					hide them by adding hidden class
+					change text to try again loser
+			display the score
+			display th number of moves
+			remove the visible class from any cards (unclear if this should really be here?)
+
+*****rewrite each of the nested IF statements so that they just have the name of the function. 
+******make the names of the variables match the names of the classes for text that is changing 
+
+
+
+

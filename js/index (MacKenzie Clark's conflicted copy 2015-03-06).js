@@ -10,7 +10,6 @@ var cards = $(".card");
 var gameCount = 0;
 var winCount = 0;
 cards=shuffleCards(cards);
-
 // Init Skrollr
 var s = skrollr.init({
     forceHeight: false
@@ -31,8 +30,7 @@ $("#start").on("click", function(){
 	newGame();
 });
 
-//the game sequence
-////////////////////////////////////////////////////////////////////
+//the game sequence ////////////////////////////////////////////////////////////
 $(".card").on("click",function(e){;
 	count ++
 //keeps track of how many cards have been flipped over
@@ -89,7 +87,7 @@ function newGame(){
 	setTimeout(resetCards, 2000);
 //ups the game count
 	gameCount += 1;
-//if you win 3 times in a row, adds a surprise card
+//if you win 5 times, adds a surprise card
 	easterEgg()
 //refreshes the view of the stats, resets them all to zero
 	displayStats();
@@ -130,7 +128,7 @@ function compareCards() {
 
 function mismatch() {
 	//if they don't match, turn them over again by adding the hidden class
-	/* off for now
+	/* shake is off for now
 	$(".visible").effect("shake", "medium");*/
 	$(".visible").addClass("hidden");
 	$(".turn").text("try again, loser");
@@ -151,7 +149,7 @@ function youWin() {
 			winCount += 1;
 		};
 function easterEgg() {
-	if ( (winCount === 5)  ) {
+	if ( winCount === 5 ) {
 	
 		$(".fatcat").addClass("kardashian");
 		$(".fatcat").removeClass("fatcat");

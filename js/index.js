@@ -34,8 +34,9 @@ $("#start").on("click", function(){
 //the game sequence
 ////////////////////////////////////////////////////////////////////
 $(".card").on("click",function(e){;
+	if($('.visible').length < 2){
+	//keeps track of how many cards have been flipped over
 	count ++
-//keeps track of how many cards have been flipped over
 	if($(this).hasClass("visible") == false){
 			//reveals the flipped over cards
 		$(e.target).toggleClass("hidden visible");
@@ -48,6 +49,7 @@ $(".card").on("click",function(e){;
 			numberOfMoves++;
 			setTimeout(compareCards, 750);
 		};
+	}
 });
 
 //this function shuffles the cards
@@ -90,7 +92,7 @@ function newGame(){
 //ups the game count
 	gameCount += 1;
 //if you win 3 times in a row, adds a surprise card
-	easterEgg()
+	setTimeout(easterEgg, 2000);
 //refreshes the view of the stats, resets them all to zero
 	displayStats();
 };

@@ -99,6 +99,7 @@ body *{
 #start{
 	font-size: 40px;
 	cursor: pointer;
+	transition: font-size .3s;
 }
 #start:hover{
 	font-size: 45px;
@@ -148,7 +149,7 @@ a{
 	background-position: 97% 57%;
 }
 .kardashian {
-	background-position: 35% 57%;
+	background-position: 35% 59%;
 }
 .hidden {
 	background-position: 3.5% 6%;;

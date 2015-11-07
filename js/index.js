@@ -77,8 +77,8 @@ function newGame(){
 
 //if new game is clicked when any cards are turned over, it removes the visible marker
 	$(".visible").toggleClass("visible");
-//removes the winning background
-	$("body").removeClass("winning");
+//removes the winning background -- getting rid of that until I find a better background image
+	//$("body").removeClass("winning");
 	//if any cards have been put out of play when new game is clicked, it turns off
 	//out-of-play, and also adds hidden back on
 	$(".out-of-play").toggleClass("out-of-play");
@@ -147,7 +147,7 @@ function matched() {
 function youWin() {
 			$(".winnertext").css("display", "block")
 			$(".visible").addClass("hidden");
-			$("body").addClass("winning");
+			//$("body").addClass("winning");
 			winCount += 1;
 		};
 function easterEgg() {

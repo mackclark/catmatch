@@ -147,7 +147,7 @@ function matched() {
 function youWin() {
 			$(".winnertext").css("display", "block")
 			$(".visible").addClass("hidden");
-			$("body").addClass("winning");
+			//$("body").addClass("winning");
 			winCount += 1;
 		};
 function easterEgg() {
